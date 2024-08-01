@@ -13,13 +13,9 @@ resource "aws_eks_cluster" "my_cluster" {
 }
 
 resource "aws_eks_node_group" "my_node_group" {
-ami_id = "ami-068e0f1a600cd311c" 
 cluster_name    = aws_eks_cluster.my_cluster.name
-disk_size = "20"
-instance_types = ["t3.medium"]
-node_group_name = "my-_node_group"
-  node_role_arn   = "arn:aws:iam::083211754961:role/all_access_uber"  # Replace with your IAM role ARN
-Version = "2012-10-17"  
+node_group_name = "my_node_group"
+node_role_arn   = "arn:aws:iam::083211754961:role/all_access_uber"  # Replace with your IAM role ARN
 subnet_ids      = ["subnet-0645b8d0abf30a013", "subnet-01a80a7476e6b401e"]      # Replace with your subnet IDs
 
   scaling_config {
