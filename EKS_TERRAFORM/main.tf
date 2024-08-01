@@ -14,7 +14,7 @@ resource "aws_eks_cluster" "my_cluster" {
 
 resource "aws_eks_node_group" "my_node_group" {
   cluster_name    = aws_eks_cluster.my_cluster.name
-  node_group_name = "my-node-group"
+  node_group_name = "my-_node_group"
   node_role_arn   = "arn:aws:iam::083211754961:role/all_access_uber"  # Replace with your IAM role ARN
   subnet_ids      = ["subnet-0645b8d0abf30a013", "subnet-01a80a7476e6b401e"]      # Replace with your subnet IDs
 
