@@ -1,5 +1,5 @@
 resource "aws_eks_cluster" "my_cluster" {
-  name     = "my-cluster"
+  name     = "my_cluster"
   role_arn = "arn:aws:iam::083211754961:role/all_access_uber" # Replace with your IAM role ARN
 
   vpc_config {
@@ -19,8 +19,8 @@ node_role_arn   = "arn:aws:iam::083211754961:role/all_access_uber"  # Replace wi
 subnet_ids      = ["subnet-0645b8d0abf30a013", "subnet-01a80a7476e6b401e"]      # Replace with your subnet IDs
 
   scaling_config {
-    desired_size = 3
-    max_size     = 5
+    desired_size = 1
+    max_size     = 3
     min_size     = 1
   }
 
